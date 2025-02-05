@@ -1,9 +1,9 @@
-import { View, Text, TextInput, Button, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, SafeAreaView, TextInput, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { styles } from '../styles/AppStyle'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
-export default function Login() {
+export default function Register() {
     return (
         <ScrollView>
             <View style={{ marginVertical: 60 }}>
@@ -11,13 +11,30 @@ export default function Login() {
             </View>
 
             <View style={styles.headingContainer}>
-                <Text style={styles.textHeading}>Hi, Welcome Back!👋</Text>
+                <Text style={styles.textHeading}>Create an account</Text>
+                <Text style={styles.label}>Connect with your friends today!</Text>
             </View>
 
             <View>
 
                 <View style={styles.textContainer}>
-                    <Text style={styles.text}>Email</Text>
+                    <Text style={styles.text}>Name</Text>
+                </View>
+
+                <View>
+                    <TextInput
+                        style={styles.textInput}
+                        placeholder='Please Enter Your Name'
+                        placeholderTextColor='#9e9e9e'
+                    />
+                </View>
+
+            </View>
+
+            <View>
+
+                <View style={styles.textContainer}>
+                    <Text style={styles.text}>Email Address</Text>
                 </View>
 
                 <View>
@@ -62,12 +79,12 @@ export default function Login() {
             </View>
 
             <View style={styles.buttonContainer} >
-                <Text style={styles.button}>Login</Text>
+                <Text style={styles.button}>Sign Up</Text>
             </View>
 
             <View style={styles.SignupContainer}>
-                <Text style={[styles.text, { color: '#9e9e9e', marginRight: 8 }]}>Don't have an account?</Text>
-                <Text style={styles.text}>Sign Up</Text>
+                <Text style={styles.label}>Already have an account?</Text>
+                <Text style={styles.text}>Login</Text>
             </View>
 
         </ScrollView>

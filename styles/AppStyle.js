@@ -16,7 +16,8 @@ export const styles = StyleSheet.create({
         borderRadius: 4,
         width: 300,
         color: '#000000',
-        paddingHorizontal: 8
+        paddingHorizontal: 8,
+        position: 'relative'
     },
     textHeading: {
         fontSize: 25,
@@ -29,6 +30,12 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         color: '#351A96',
         fontWeight: 'semibold'
+    },
+    label: {
+        fontSize: 14,
+        color: '#9e9e9e',
+        fontWeight: 'semibold',
+        marginRight: 8
     },
     textContainer: {
         marginVertical: 10
@@ -49,5 +56,13 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         marginTop: 50
+    },
+    textInputContainer: {
+        flexDirection: 'row'
+    },
+    icon: {
+        alignSelf: 'center',
+        position: 'absolute',
+        right: 15
     }
 })
