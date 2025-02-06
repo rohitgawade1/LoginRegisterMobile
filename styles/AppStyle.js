@@ -64,5 +64,10 @@ export const styles = StyleSheet.create({
         alignSelf: 'center',
         position: 'absolute',
         right: 15
+    },
+    error: {
+        // alignSelf: 'center',
+        color: 'red',
+        width: 300,
     }
 })

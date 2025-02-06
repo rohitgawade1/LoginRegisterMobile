@@ -1,9 +1,11 @@
 import { View, Text, TextInput, Button, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { styles } from '../styles/AppStyle'
 
 export default function Login({ navigation }) {
+    const [IsShow, setIsShow] = useState(false);
+
     const navigate = () => {
         navigation.navigate('Register')
     }
@@ -48,14 +50,17 @@ export default function Login({ navigation }) {
                                 style={styles.textInput}
                                 placeholder='Please Enter Your Password'
                                 placeholderTextColor='#9e9e9e'
+                                secureTextEntry={IsShow ? false : true}
                             />
                         </View>
-                        <TouchableOpacity style={styles.icon}>
+                        <TouchableOpacity
+                            style={styles.icon}
+                            onPress={() => setIsShow(!IsShow)}
+                        >
                             <FontAwesome
-                                name='eye'
+                                name={IsShow ? 'eye-slash' : 'eye'}
                                 size={20}
                             />
-
                         </TouchableOpacity>
                     </View>
 
@@ -67,9 +72,9 @@ export default function Login({ navigation }) {
                     </View>
                 </View>
 
-                <View style={styles.buttonContainer} >
+                <TouchableOpacity style={styles.buttonContainer} >
                     <Text style={styles.button}>Login</Text>
-                </View>
+                </TouchableOpacity>
 
                 <View style={styles.SignupContainer}>
                     <Text style={[styles.text, { color: '#9e9e9e', marginRight: 8 }]}>Don't have an account?</Text>
